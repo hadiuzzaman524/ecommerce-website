@@ -1,0 +1,31 @@
+
+.companie_item{
+
+	height: 250px;
+	width: 250px; 
+	border:1px solid lightblue;
+	background: green;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	border-radius: 5px;
+}
+.companie_item:hover{
+
+	height: 255px;
+	width: 255px;
+	border: 2px solid green; 
+	
+}
+.companie_item a,h2{
+
+text-decoration: none;
+background: white;
+margin-top: 10px;
+
+}
+.companie_item h2:hover{
+
+color: green;
+
+}

@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+.mainheader{
+    width: 100%; 
+    height: 110px;
+    background: black; 
+    color: white;
+    padding-left: 10px;
+    box-sizing: border-box;
+    
+}
+.clear{
+    clear: both;
+}
+.logodesign{
+    float: left;
+    height: 100%;
+width: 25%;
+}
+.searchmenu {
+    float: left;
+    height: 100%;
+    width: 75%;
+}
+
+.searchmenu h3{
+    
+    color: black;
+    display: inline;
+    margin-left: -35px;
+    border-radius:5px;
+    margin-bottom: -10px;
+    padding: 8px;
+    padding-bottom: 5px;
+        }
+
+.top{
+    height: 60%;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.top h2 a i{
+ 
+    margin: 5px;
+    color: white;
+    margin-top:20px;
+    border-radius: 5px;
+   
+}
+
+.top h2 a i:hover{
+ 
+    
+  color: #80CC28;
+   
+}
+
+.bottom{
+    height: 40%;
+    padding-top: 10px;
+    box-sizing: border-box;
+   
+}
+.bottom ul{
+    display: inline-flex;
+    list-style: none;
+    text-align: center;
+   
+}
+.bottom ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+
+}
+.bottom ul li a:hover{
+   background-color: #80CC28;
+    border-radius: 5px;
+
+}
+#hiddenitem{
+  display: none;
+}
+
+/*not work properly*/
+.bottom ul li a:active{
+   background-color: #414344;
+    
+
+}
+
+.catagorysub{
+    
+   
+    display: none;
+    
+}
+.bottom ul li:hover .catagorysub{
+    
+    display: block;
+    position: absolute;
+    background: black;
+    margin-top: 4px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.bottom ul li:hover .catagorysub ul {
+   display: block;
+}
+.bottom ul li:hover .catagorysub ul li {
+   
+   
+    border-radius: 0;
+    text-align: left;
+}
+.bottom ul li:hover .catagorysub ul li a{
+    display: block;
+}
+
+.discountbar{
+    height: 20px;
+    width: 100%;
+    background-color: #414344;
+    text-align: center;
+    color: white;
+}
+.top input[type="text"]{
+    width: 50%;
+    height:65%;
+    margin: 0 auto;
+    border: none;
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+.top input[type="text"]:focus{
+    outline: none;
+}
+.checkbutton{
+    color: white;
+    float: right;
+    cursor: pointer;
+    display: none;
+    
+    
+}
+#check{
+    display: none;
+}
+#image{
+    height: 90%;
+    width:80%;
+    margin-top: 7px;
+}
+@media (max-width:1060px)
+{
+    
+   .bottom ul li a{
+    text-decoration: none;
+   
+    font-size: 13px;
+     color: white;
+        
+    box-sizing: border-box;
+
+} 
+    
+}
+
+/*medium */
+@media (max-width:952px){
+   
+   .bottom ul li a{
+    text-decoration: none;
+    margin: 7px;
+    padding: 7px;
+    font-size: 12px;
+     color: white;
+        
+    box-sizing: border-box;
+
+}
+    
+    .logodesign img{
+        height: 55px;
+        width: 55px;
+}
+   
+
+} 
+
+@media (max-width:635px)
+{
+    .top h2 a i{
+ 
+    display: none;
+   
+}
+}
+
+
+
+
+ @media (max-width:858px){
+        .checkbutton{
+            display: block;
+            margin-top: 20px;
+            margin-right: 40px;
+            margin-top: -40px;
+            
+        } 
+        .bottom ul{ 
+          
+            width: 100%;
+            height:100vh; 
+            background: #2c3e50;
+            position: fixed;
+            padding: 30px;
+            left: -120%;
+            margin-top: 34px;
+            display: block;
+            font-size: 25px;
+            transition: all .5s;
+           
+        }
+        #check:checked~ul{
+            left: 0;
+            
+            
+        }
+        
+        .bottom ul li{
+            display: block;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+     
+     #hiddenc{
+         display: none;
+     }
+        .bottom ul li a{
+            display: block;
+            text-transform: uppercase;
+           text-align: left;
+            background: none;
+            font-weight: 700;
+            margin-left: 35%;
+            
+        }
+           .bottom ul li a:hover{
+               background: none;
+               color: #B8860B;
+    
+               font-weight:1000;
+        
+            
+        }
+        
+        .logodesign img{
+        height: 40px;
+        width: 40px;
+        }
+        .logodesign h3{
+            font-size:17px;
+        }
+        
+ .top input[type="text"]{
+     width: 40%;
+     height:55%;
+     margin-top: 20px;
+     margin-left: 30px;
+   
+}
+
+     #hiddenitem{
+  display: block;
+}
+    
+}
+
+
+
+
+
+
+
+@media (max-width:600px)
+{
+    .logodesign h3{
+            font-size:16px;
+        } 
+    .logodesign h5{
+        font-size: 10px;
+    }
+}

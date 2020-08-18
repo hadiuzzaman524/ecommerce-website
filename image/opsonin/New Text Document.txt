@@ -1,0 +1,7 @@
+('Abdorin®' ,'Dicycloverine Hydrochloride' , 'opsonin','80','medicine','..imageopsoninabdorin.png'),
+('Acerux®' ,'Acyclovir' , 'opsonin','17','medicine','..imageopsoninacerux.png'),
+('Advel®' ,'Ibuprofen' , 'opsonin','53','medicine','..imageopsoninadvel.jpg'),
+('Algisum®' ,'Potassium Bicarbonate + Sodium Alginate' , 'opsonin','85','medicine','..imageopsoninalgisum.png'),
+('Amifen®' ,'Mefenamic Acid' , 'opsonin','39','medicine','..imageopsoninamifen.png'),
+('Amocal®' ,'Amlodipine' , 'opsonin','8','medicine','..imageopsoninamocal.png'),
+('Bonfix®' ,'Ibandronic Acid' , 'opsonin','24','medicine','..imageopsoninbonfix.png')

@@ -1,0 +1,10 @@
+ ('CAPSULE AGERD®' ,'TABKHEER' , 'hamdard','200','harbal','../image/harbal/agred.jpg'),
+('CAPSULE ANTILIGO' ,'BARSINA' , 'hamdard','120','harbal','../image/harbal/Antiligo-2.jpg'),
+('CAPSULE CENTURIN®' ,'PENITAB' , 'hamdard','99','harbal','../image/harbal/centurin-1.jpg'),
+('CAPSULE DIABEAT' ,'' , 'hamdard','200','harbal','../image/harbal/Diabet.jpg'),
+('CAPSULE ENDUREX®' ,'MUMSHIK' , 'hamdard','150','harbal','../image/harbal/endurex1-1.jpg'),
+('CAPSULE GINTON' ,'GINSENG' , 'hamdard','230','harbal','../image/harbal/Ginton.jpg'),
+('HAMDARD HONEY' ,'' , 'hamdard','400','harbal','../image/harbal/Hamdard-Honey.jpg'),
+('Capsule Jonort®' ,'' , 'hamdard','80','harbal','../image/harbal/Jonort-2.jpg'),
+('CAPSULE LIBIDEX® ' ,'NISHAT' , 'hamdard','92','harbal','../image/harbal/libidex-1.jpg');
+

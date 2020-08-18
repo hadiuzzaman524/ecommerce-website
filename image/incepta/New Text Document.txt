@@ -1,0 +1,7 @@
+('Acuren' ,'(Hydrochlorothiazide)' , 'incepta','3','medicine','../image/incepta/Acuren.jpg'),
+('Adaben Duo Gel' ,'Adapalene & Benzoyl peroxide' , 'incepta','56','medicine','../image/incepta/Adaban.jpg'),
+('Adiponil' ,'(Orlistat)' , 'incepta','7','medicine','../image/incepta/Adiponil.jpg'),
+('Alcafta Sterile Eye Drops' ,'(Alcaftadine)' , 'incepta','60','medicine','../image/incepta/Alcafta.jpg'),
+('Amidol' ,'(Iopamidol)' , 'incepta','230','medicine','../image/incepta/Amidol-300.jpg'),
+('Aquaphen' ,'Pseudoephedrine, guaiphenasine & triprolidine' , 'incepta','120','medicine','../image/incepta/Aquaphen.jpg'),
+('Aritone Z' ,'Vitamin B Complex & Zin' , 'incepta','200','medicine','../image/incepta/aritonz.jpg')

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main_container{
+    height:auto;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  
+}
+.leftitem{
+    height: 100%;
+    width: 900px;
+    box-sizing: border-box;
+    padding: 20px;
+    float: left;
+   
+}
+.rightitem{
+  
+    height: 300px;
+    width: 500px;
+    border:1px solid black;
+    background: #ededed;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    float: left;
+    margin-top: 20px;
+    box-sizing: border-box;
+    line-height: 2;
+    padding: 20px;
+   
+    
+}
+.rightfirst{
+    height: auto;
+    width: 50%; 
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left;
+}
+.rightsecond{
+    height: auto;
+    width: 50%; 
+    box-sizing: border-box;
+    overflow: hidden;
+    float: left; 
+}
+.cart_element{
+    margin-bottom: 15px;
+    height: 180px;
+    width: 90%;
+    background: #ededed;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}
+.cartelement_first{
+    height: 100%; 
+    width: 25%; 
+    float: left;
+	text-align: center;
+	padding: 16px;
+	box-sizing: border-box;
+	background: radial-gradient(white 30%,lightblue 70%);
+    border-left: 1px solid black;
+    border-radius: 5px;
+}
+.cartelement_first img{
+    
+    height: 80%; 
+    width: 80%; 
+    margin-top: 6px;
+	border-radius:5px;
+}
+.cartelement_second{
+    height: 100%; 
+    width: 75%; 
+    float: left;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-top: 10px;
+    line-height: 1.5;
+}
+.toph1{
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.hadi{
+    height: 25px; 
+    width: 30px;
+    background: blue;
+    border: none;
+    color: white;
+}
+.hadi:hover{
+   font-weight: 800;
+}
+.count{
+    height: 20px; 
+    width: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.removebutton{
+    height: 30px;
+    margin-top: 8px;
+    width: 90px;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background: red;
+    text-align: center;
+    border: none;
+}
+.removebutton:hover{
+  font-weight: 800;
+}

@@ -1,0 +1,13 @@
+('Almex 400' ,'Cheqable tablate' , 'square','3','medicine','../image/square/almex_400_large_1.png'),
+('ambrox' ,'ambroxol hydrochloride bp' , 'square','25','medicine','../image/square/AMBOX-15ml.jpg'),
+('Ambrisan 5' ,'ambrisentan 5mg' , 'square','6','medicine','../image/square/Ambrisan-carton_large.jpg'),
+('amistar 500' ,'amistacin 500mg' , 'square','2.5','medicine','../image/square/amister_large.png'),
+('antiva ' ,'adefovir dipivoxil' , 'square','13','medicine','../image/square/ANTIVA-.jpg'),
+('apsol oral paste' ,'amlexanox 5%' , 'square','40','medicine','../image/square/APSOL-5MG.jpg'),
+('camlodin 5' ,'amlodipine 5mg' , 'square','5','medicine','../image/square/camlodin_large.png'),
+('esloric' ,'allopurinol bp 100mg' , 'square','17','medicine','../image/square/ESLORIC-100GM.jpg'),
+('flexi' ,'fexioxcide 10mg' , 'square','03','medicine','../image/square/Flexi.jpg'),
+('fona 0.1% cream' ,'adapalene' , 'square','55','medicine','../image/square/fona_small_1.jpg'),
+('fona plus gel' ,'adapalene & benzoyl peroxide' , 'square','75','medicine','../image/square/Fona-plus-gel_e.jpg'),
+('Geston' ,'allylestrenol 5mg' , 'square','2','medicine','../image/square/GESTON.jpg'),
+('tryptin 10' ,'arritriptyline hydrochloride usp 10mg' , 'square','10','medicine','../image/square/TRYPTIN-10.jpg')

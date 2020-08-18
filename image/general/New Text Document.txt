@@ -1,0 +1,7 @@
+('acefenac' ,'' , 'general pharma','27','medicine','../image/general/acefenac.jpg'),
+('acnecare' ,'salicylic acid' , 'general pharma','27','medicine','../image/general/acnecare.jpg'),
+('adpas' ,'pioglitazone' , 'general pharma','27','medicine','../image/general/adpas.jpg'),
+('astagen' ,'astaxanthin' , 'general pharma','27','medicine','../image/general/astagen.jpg'),
+('azomac' ,'azithromycin' , 'general pharma','27','medicine','../image/general/azomac.jpg'),
+('meclixin' ,'meclizine hydrochloride 25mg' , 'general pharma','27','medicine','../image/general/meclixin.jpg'),
+('acunac' ,'bromfenac 0.09' , 'general pharma','27','medicine','../image/general/acunac.png');

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="504.581" height="240.813" viewBox="0 0 504.581 240.813">
+  <g id="logo" transform="translate(-286.419 -142.187)">
+    <g id="whitecolorlogo_mm" transform="translate(-559 -294)">
+      <g id="whitecolorlogo" transform="translate(845.419 436.187)">
+        <g id="Group_4" data-name="Group 4">
+          <g id="Group_1" data-name="Group 1">
+            <path id="Path_1" data-name="Path 1" d="M1011.3,401.7s19.892-11.333,19.892-20.877-9.946-11.93-19.892-9.544a13.052,13.052,0,0,0-8.092,5.1c-3.492,4.431-5.666,11.064-6.117,12.2-.71,1.789-7.1,9.544-14.209,5.368s-59.677-41.754-59.677-41.754-5.684,11.93,0,19.088S962.992,401.7,962.992,401.7l-39.785-20.877s-4.973,17.895,0,20.877,39.785,20.28,39.785,20.28L923.208,407.66s-8.525,8.947,0,14.316c5.618,3.538,24.5,13.551,40.392,24.2,7.909,5.3,15.167,10.878,19.285,15.76,12.078,14.316-9.946-4.772-9.946-4.772s-1.21,8.676-4.263,24.336c-1.305,6.7-5.023,19.852-5.684,25.769-2.131,19.088,3.552,37.578,5.684,34.6s4.263-25.052,14.209-50.1,28.418-56.07,28.418-56.07,35.955,27.26,27.43,21.473S1011.3,401.7,1011.3,401.7Z" transform="translate(-919.419 -352.187)" fill="#b8860b"/>
+          </g>
+          <path id="Path_3" data-name="Path 3" d="M1452.46,366.377c0,2.768-17.515,40.078-17.515,40.078s-29.84,80.7-29.265,80.074c1.534-1.661,0,8.859,0,8.859s31.442-74.2,46.779-98.559S1452.46,361.948,1452.46,366.377Z" transform="translate(-1361.83 -310.462)" fill="#fcfcfc" stroke="#f3e7db" stroke-width="1"/>
+        </g>
+        <g id="BAG" transform="translate(88 87.193)">
+          <g id="Group_6" data-name="Group 6" transform="translate(0 11)">
+            <rect id="Rectangle_2" data-name="Rectangle 2" width="62" height="44" rx="5" fill="#80cc28"/>
+            <g id="Group_5" data-name="Group 5" transform="translate(14.5 6.5)">
+              <line id="Line_1" data-name="Line 1" x1="34" transform="translate(0 16)" fill="none" stroke="#fff" stroke-width="10"/>
+              <line id="Line_2" data-name="Line 2" y2="32" transform="translate(17)" fill="none" stroke="#fff" stroke-width="10"/>
+            </g>
+          </g>
+          <path id="Subtraction_1" data-name="Subtraction 1" d="M39.927,16.143v0C36.385,10.31,28.564,6.542,20,6.542S3.615,10.31.073,16.141A11.02,11.02,0,0,1,0,14.869,11.59,11.59,0,0,1,1.572,9.081,15.46,15.46,0,0,1,5.858,4.355a21.331,21.331,0,0,1,6.357-3.187,26.517,26.517,0,0,1,15.57,0,21.33,21.33,0,0,1,6.357,3.187,15.459,15.459,0,0,1,4.286,4.726A11.591,11.591,0,0,1,40,14.869a11.285,11.285,0,0,1-.072,1.273Z" transform="translate(11)" fill="#80cc28"/>
+        </g>
+      </g>
+    </g>
+    <text id="HomePharmacy" transform="translate(367 340)" fill="#fff" font-size="55" font-family="Oxygen-Bold, Oxygen" font-weight="700" letter-spacing="0.015em"><tspan x="0" y="0">HomePharmacy</tspan></text>
+    <text id="Online_medicine_shop" data-name="Online medicine shop" transform="translate(326 377)" fill="#fff" font-size="30" font-family="ArialMT, Arial" letter-spacing="0.03em"><tspan x="0" y="0">Online medicine shop</tspan></text>
+  </g>
+</svg>
