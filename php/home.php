@@ -10,9 +10,12 @@ session_start();
 // check add card button is clicked or not
 if(isset($_POST['addcard']))
 {
-  
+   
+    //setcookie("userinformation","",time()-60);
     
-    //check the product is add cart or not...
+    if(isset($_COOKIE['userinformation'])){
+        
+            //check the product is add cart or not...
     if(isset($_SESSION['cart'])){
      
        
@@ -37,10 +40,13 @@ if(isset($_POST['addcard']))
             
               $item_array=array(
         
-            'product_id'=> $_POST['product_id']
+            'product_id'=> $_POST['product_id'],
+            'quantity'=> 1,
+            'price'=>$_POST['product_price'],
+            'name'=>$_POST['product_name']
         );
         
-            $_SESSION['cart'][$count]=$item_array;  
+            $_SESSION['cart'][$count]=$item_array;   
 
               //check this session variable from script.php
           $_SESSION['added_cart_dialog']='added';    
@@ -52,22 +58,28 @@ if(isset($_POST['addcard']))
     // first time there is no item execute this block and add 0 index value is first added item
     else{
         
-        $item_array=array(
+        $item_array=array( 
         
-            'product_id'=> $_POST['product_id']
+            'product_id'=> $_POST['product_id'],
+            'quantity'=>1,
+            'price'=>$_POST['product_price'],
+             'name'=>$_POST['product_name']
         );
         
         $_SESSION['cart'][0]=$item_array;
         
         //print_r($_SESSION['cart']);
     }
-     
-
-
-    
+        
+    }else{
+        
+        $_SESSION['Please_Create_Account']='create'; 
+    }   
 }
      
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,7 +1,17 @@
 <?php 
 //session_start();
  require_once("cart_item.php");
-require_once("returndata.php");
+ require_once("returndata.php");
+
+     if(isset($_POST['continue_shoping'])){
+       header("location:product.php");
+
+     }
+     elseif (isset($_POST['checkoutbutton'])) {
+         header("location:checkout.php");
+     }
+
+
 
 ?>
 
@@ -10,7 +20,7 @@ require_once("returndata.php");
 <head>
     <meta charset="UTF-8">
     <title>cart</title>
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/carttest.css">
 </head>
 
 <?php include("header.php");
@@ -67,30 +77,54 @@ require_once("returndata.php");
             <!-- Left Element-->
             <div class="rightfirst">
                 
-                 <p>Price (4 items)  </p>
+               <?php 
+
+               $total=0; 
+               $del=50;
+                    foreach ($_SESSION['cart'] as $key => $value){
+
+                       print($value['name']."  --- (".$value['price']."*".$value['quantity'].")<br>");
+                        $total+=$value['price']*$value['quantity']; 
+                        
+                     }
+               ?>
             
-            <p>Delivary Charges</p>
+            <p>Delivery Charges </p>
             <hr style="margin-right:20px; margin-top:6px;">
             
-            <h4>Account Payable</h4>
+            <h4>Account Payable  </h4>
             </div>
-            
-            
-            <!--Right elemnt-->
+
             <div class="rightsecond">
-                
-                <h4>$555  </h4>
-            
-            <h4 style="color:green">FREE</h4>
-              <hr style="margin-right:20px; margin-top:6px;">
-              
-               <h4>$555</h4>
+                <?php 
+                foreach ($_SESSION['cart'] as $key => $value){
+                print($value['price']*$value['quantity']."৳<br>"); 
+                }
+
+                ?>
+                <p>50৳</p>
+                <hr style="margin-right:20px; margin-top:6px;">
+                <h4> <?php echo $total+$del."৳"; ?></h4>
             </div>
             
-           
             
+        
+        <div class="finalarea">
+
+            <form action="" method="post">
+
+                <button name="continue_shoping" value="continue">Continue to shoping</button>
+                <button name="checkoutbutton" value="letscheck">Checkout</button>
+                
+            </form>
+
+        </div>
+              
+           
+
            
         </div>
+          
         
     </div>
 </body>

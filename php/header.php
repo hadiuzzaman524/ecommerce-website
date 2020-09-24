@@ -1,11 +1,25 @@
+<?php 
 
+if(isset($_POST['searchbutton'])){
+    
+    $name=$_POST['searchbar'];
+    if($name!=null){
+
+      $_SESSION['searchitemname']=$name; 
+      header("location:search_result.php");
+    }
+
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>HEADER</title>
-   <link rel="stylesheet" href="../css/test_header.css">
+   <link rel="stylesheet" href="../css/head.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
@@ -30,16 +44,16 @@
             
        
 
-           
+           <!--STart top -->
             <div class="top">
           
               
-                   
-         
+          <form style="display: inline;" action="" method="post">
            <input type="text" name="searchbar" placeholder="Search product using name.." >
            
-           <h3><button style="padding: 3px;" type="submit" name="search" value="search"><i class="fa fa-search" aria-hidden="true"></i></button></h3>
-            
+           <button class="sendbutton" type="submit" name="searchbutton" value="sendinfo"> <i class="fa fa-search" aria-hidden="true"></i></button>
+        
+          </form> 
 
                <h2 style="float:right; margin-right:15%"> <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></h2>
                  <h2 style="float:right;"> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></h2>
@@ -48,6 +62,9 @@
                        <h2 style="float:right;"> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h2>
                       
             </div>
+
+            <!--end top-->
+
             
           <div class="clear"></div>
             
@@ -101,9 +118,39 @@
                      
                     <li><a href="../php/contactus.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
                     
-                     <li><a href="../php/login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a></li>
-                     
+                    
                       <li><a href="../php/signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+                  <?php 
+                    echo ""?>
+                       <li><a href= <?php 
+                        
+                        if(isset($_COOKIE['userinformation'])){
+                        
+                           echo"../php/logout.php";
+                          
+                        }
+                    else{
+                       echo"../php/login.php"; 
+                    }
+                         ?> ><i class="fa fa-sign-in" aria-hidden="true"></i> 
+                    <?php
+                    
+                  ?>    
+                  
+                     <?php 
+                         
+                         if(isset($_COOKIE['userinformation']))
+                         {
+                             echo "Log Out";
+                         
+                             
+                         }else{
+                             echo "Log in"; 
+                         }
+                        
+                    ?>
+                     </a></li>
+                     
                     
                 </ul>
 

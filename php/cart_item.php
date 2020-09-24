@@ -2,30 +2,60 @@
 
 
 session_start();
+require_once("returnquantity.php"); 
 
-      $_SESSION['count']=1;
 
-      if(isset($_POST['plusbutton'])){
+
+
+
+if(isset($_POST['remove']) || isset($_POST['plusbutton']) || isset($_POST['minusbutton'])){
+
+    foreach ($_SESSION['cart'] as $key => &$value) {
+
+    if($value['product_id']==$_POST['getproduct_id']){
+
+//remove item from cart.......
+      if(isset($_POST['remove'])){
+
+    //  $_SESSION['itemremove']='success'; // not working this line
+      unset($_SESSION['cart'][$key]);
+     }
+     elseif (isset($_POST['plusbutton'])) {
+       
+        $value['quantity']+=1; 
         
-        $_SESSION['count']=$_POST['total_item']+1;
-      }
-      if (isset($_POST['minusbutton'])) {
-      
-        if($_POST['total_item']>1){
+     }
+     elseif (isset($_POST['minusbutton'])) {
 
-        $_SESSION['count']=$_POST['total_item']-1;
+      
+        if($value['quantity']>1){
+          $value['quantity']-=1;
 
         }
-      }
+         
+         
+     }
 
+
+    }
+
+  
+   }
+
+}
+unset($_SESSION['getproduct_id']);
+
+
+//...............................................................
 
 function getCart($img,$name,$description,$price,$product_id){
+
   echo ''?>
 
 
 <html>
 <head>
-   <link rel="stylesheet" href="../css/cart.css">
+   <link rel="stylesheet" href="../css/item.css">
    
 </head>
 <body>
@@ -39,7 +69,9 @@ function getCart($img,$name,$description,$price,$product_id){
               
               <?php 
             echo "<img src=$img alt='Image is not available'>"; 
-        ?>
+            ?>
+             
+            
               </div>
               
               <div class="cartelement_second">
@@ -55,21 +87,30 @@ function getCart($img,$name,$description,$price,$product_id){
                        class="hadi" type="submit" name="minusbutton"> - </button>
                        
 
-                       <input type="text" value="<?php echo $_SESSION['count']; ?>"
-                       name="total_item"
-                       class="count">
+                       <input type="text" value="<?php 
+
+                           foreach ($_SESSION['cart'] as $key => $value) {
+
+                              if($value['product_id']==$product_id){
+
+                                print(getQ($product_id));
+                              }
+
+                            }
+                       ?>" name="total_item" class="count">
                        
 
                         <button class="hadi" type="submit" name="plusbutton"> + </button>
-                       
-                       	<input type="hidden" name="product_id"
-      	                 value=" <?php echo $product_id; ?>" >
+                         <input type="hidden" name="getproduct_id"
+                         value=" <?php echo $product_id; ?>" >
+                         <input type="hidden" name="quantity" value="<?php print(getQ($product_id)); ?>">
+
+
+                   <button class="removebutton" name="remove" value="removeclick">Remove</button>
+                         
                        
                    </form>
-                   
-                   <form action="">
-                   <button class="removebutton">Remove</button>
-                   </form>
+                  
               </div>
               
               
@@ -82,6 +123,14 @@ function getCart($img,$name,$description,$price,$product_id){
 
   <?php    
 }
+?>
+
+<?php 
+include("script.php");
 
 ?>
+
+
+
+
 

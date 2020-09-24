@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.signuplogin{
+    
+    height: 380px;
+    width: 450px;
+    background: white;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 150px;
+}
+body{
+    background-color: #ededed;
+}
+.clear{
+    clear: both;
+}
+.header{
+    width: 450px; 
+    margin: 0 auto;
+}
+.header h2{
+ text-align: center;
+    margin-top: 30px;
+}
+.header h1{
+   text-align: center;
+    
+}
+.header h3{
+   text-align: center;
+    margin-top: 5px;
+}
+.header h4{
+   text-align: right;
+    margin-top: 25px;
+
+}
+.header h4 a:hover{
+ 
+color: green;
+}
+.formarea{
+    margin-top: 20px;
+}
+input[type='password'],
+input[type='email']{
+    display: block;
+    height: 35px; 
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+input[type='submit']
+{
+    background-color: #E78506;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-right: 20px;
+    font-size: 18px; 
+    float: right;
+    width: 110px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    
+}
+input[type='submit']:hover
+{
+   
+    background: green;
+    cursor: pointer;
+}
+label{
+    margin-left: 20px;
+    display: block;
+    font-weight: 500;
+}
+.formarea p a:hover{
+ 
+    color: green;
+}
+.hrclass{
+   
+    width:90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+

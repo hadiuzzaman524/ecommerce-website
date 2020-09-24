@@ -29,7 +29,34 @@ swal("OOPS....!", "Already added in the cart..!");
 unset($_SESSION['already_added_cart_dialog']);
 }
 
+/* Show create an account */
 
+if(isset($_SESSION['Please_Create_Account'])){
+?>
+    
+<script>
+
+swal("OOPS....!", "Please Create an account");
+
+</script>  
+<?php 
+unset($_SESSION['Please_Create_Account']);
+}
+
+/*item remove dialog */
+/* Show create an account */
+
+if(isset($_SESSION['itemremove'])){
+?>
+    
+<script>
+
+swal("Item is remove successfully.!");
+
+</script>  
+<?php 
+unset($_SESSION['itemremove']);
+}
 
 
 ?>

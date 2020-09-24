@@ -11,8 +11,11 @@ session_start();
 if(isset($_POST['addcard']))
 {
   
+   //setcookie("userinformation","",time()-60);
     
-    //check the product is add cart or not...
+    if(isset($_COOKIE['userinformation'])){
+        
+            //check the product is add cart or not...
     if(isset($_SESSION['cart'])){
      
        
@@ -61,10 +64,11 @@ if(isset($_POST['addcard']))
         
         //print_r($_SESSION['cart']);
     }
-     
-
-
-    
+        
+    }else{
+        
+        $_SESSION['Please_Create_Account']='create'; 
+    }   
 }
      
 ?>

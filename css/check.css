@@ -1,0 +1,51 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+.formarea {
+	margin-top: 30px; 
+	margin-left: 100px; 
+	margin-bottom: 100px;
+}
+.formarea label{
+	display: block;
+	margin-top: 10px;
+	color: red;
+
+}
+.formarea input[type='text'],input[type='number'],input[type="Email"]{
+
+	display: block;
+	margin-top: 10px;
+	height: 40px; 
+	font-size: 17px;
+	width: 50%;
+	padding-left: 10px;
+}
+.clear{
+	clear: both;
+}
+.paymentarea{
+	margin-left: 100px; 
+	margin-top: 30px;
+}
+.formarea button{
+	background-color: darkorange; 
+	margin-top: 20px; 
+	padding: 10px; 
+	outline: none; 
+	border: none; 
+	width: 50%; 
+	height: 35px;
+	font-size: 17px;
+	color: white;
+
+}
+
+.formarea button:hover{
+	background-color: green;
+	font-weight: 600; 
+	
+
+}

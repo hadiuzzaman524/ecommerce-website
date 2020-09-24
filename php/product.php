@@ -11,8 +11,11 @@ session_start();
 if(isset($_POST['addcard']))
 {
   
+   //setcookie("userinformation","",time()-60);
     
-    //check the product is add cart or not...
+    if(isset($_COOKIE['userinformation'])){
+        
+            //check the product is add cart or not...
     if(isset($_SESSION['cart'])){
      
        
@@ -23,7 +26,10 @@ if(isset($_POST['addcard']))
         
         //check if product id is already added or not....
         if(in_array($_POST['product_id'],$item_array_id)){
-           print(" already added");
+          // print(" already added");
+          
+         $_SESSION['already_added_cart_dialog']='added'; 
+        
             
         }
         
@@ -37,7 +43,10 @@ if(isset($_POST['addcard']))
             'product_id'=> $_POST['product_id']
         );
         
-            $_SESSION['cart'][$count]=$item_array;      
+            $_SESSION['cart'][$count]=$item_array;  
+
+              //check this session variable from script.php
+          $_SESSION['added_cart_dialog']='added';    
             
         }
         
@@ -55,10 +64,11 @@ if(isset($_POST['addcard']))
         
         //print_r($_SESSION['cart']);
     }
-     
-
-
-    
+        
+    }else{
+        
+        $_SESSION['Please_Create_Account']='create'; 
+    }   
 }
      
 ?>
@@ -108,3 +118,8 @@ include("footer.php");
 ?>
 
 </html>
+
+<?php 
+include("script.php");
+
+?>

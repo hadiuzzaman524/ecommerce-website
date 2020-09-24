@@ -34,6 +34,9 @@ echo ''?>
       	
       	<input type="hidden" name="product_id"
       	 value=" <?php echo $product_id; ?>" >
+
+           <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
       	 
       </div>
     
@@ -197,6 +200,55 @@ echo ''?>
 <?php 
 }
 
+/*search product*/
+/* harbal category */
+function search_item($img,$name,$description,$manufactured,$price,$product_id){
+echo ''?>
+
+<div> 
+<html>
+<head>
+    <link rel="stylesheet" href="../css/item.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+  
+  <form action="search_result.php" method="post">
+      
+
+  <div class="carditem">
+      <div class="firstcard">
+        <?php 
+            echo "<img src=$img alt='Image is not available'>"; 
+        ?>
+      
+      </div>
+
+      <div class="secondcard">
+        
+        <h2 style="text-transform: capitalize;"><?php echo $name; ?></h2>
+        <p><i style="text-transform: capitalize;"><?php echo $description; ?></i></p>
+        <p style="margin-top: 5px">Manufactured by: <span style="text-transform: uppercase;font-weight: 700;"><?php echo $manufactured; ?></span></p>
+        <h3 style="margin-top: 10px;"><?php echo $price; ?> TK Per Pice</h3>
+      
+          <button type="submit" name="addcard" class="button_style"> Add to Card <i class="fa fa-cart-plus" aria-hidden="true"> </i></button>
+        
+        
+        <input type="hidden" name="product_id"
+         value=" <?php echo $product_id; ?>" >
+         
+      </div>
+    
+  </div>
+   
+     </form>
+    
+</body>
+</html>
+</div>
+<?php 
+}
+
 
 /*all product */
 
@@ -235,6 +287,7 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
          
       </div>
     
@@ -247,5 +300,54 @@ echo ''?>
 </div>
 <?php 
 }
+
+/*baximco */
+function getbax($img,$name,$description,$manufactured,$price,$product_id){
+echo ''?>
+
+<div> 
+<html>
+<head>
+    <link rel="stylesheet" href="../css/item.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+  
+  <form action="baximco.php" method="post">
+      
+
+  <div class="carditem">
+      <div class="firstcard">
+        <?php 
+            echo "<img src=$img alt='Image is not available'>"; 
+        ?>
+      
+      </div>
+
+      <div class="secondcard">
+        
+        <h2 style="text-transform: capitalize;"><?php echo $name; ?></h2>
+        <p><i style="text-transform: capitalize;"><?php echo $description; ?></i></p>
+        <p style="margin-top: 5px">Manufactured by: <span style="text-transform: uppercase;font-weight: 700;"><?php echo $manufactured; ?></span></p>
+        <h3 style="margin-top: 10px;"><?php echo $price; ?> TK Per Pice</h3>
+      
+          <button type="submit" name="addcard" class="button_style"> Add to Card <i class="fa fa-cart-plus" aria-hidden="true"> </i></button>
+        
+        
+        <input type="hidden" name="product_id"
+         value=" <?php echo $product_id; ?>" >
+         
+      </div>
+    
+  </div>
+   
+     </form>
+    
+</body>
+</html>
+</div>
+<?php 
+}
+
 
 ?>

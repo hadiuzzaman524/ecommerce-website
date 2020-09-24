@@ -11,8 +11,11 @@ session_start();
 if(isset($_POST['addcard']))
 {
   
+   //setcookie("userinformation","",time()-60);
     
-    //check the product is add cart or not...
+    if(isset($_COOKIE['userinformation'])){
+        
+            //check the product is add cart or not...
     if(isset($_SESSION['cart'])){
      
        
@@ -61,13 +64,16 @@ if(isset($_POST['addcard']))
         
         //print_r($_SESSION['cart']);
     }
-     
-
-
-    
+        
+    }else{
+        
+        $_SESSION['Please_Create_Account']='create'; 
+    }   
 }
      
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,7 +109,7 @@ include("header.php");
                  if($row['product_companey']=='baximco'){
 
 
-                  test_medicine($row['product_image'],$row['product_name'],$row['product_exp'],$row['product_companey'],$row['product_price'],$row['product_id']);
+                  getbax($row['product_image'],$row['product_name'],$row['product_exp'],$row['product_companey'],$row['product_price'],$row['product_id']);
 
                   }
               }
