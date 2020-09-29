@@ -87,6 +87,9 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
+            <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
          
       </div>
     
@@ -138,6 +141,11 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
+         <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
+
+         
          
       </div>
     
@@ -187,6 +195,9 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
+         <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
          
       </div>
     
@@ -236,6 +247,9 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
+         <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
          
       </div>
     
@@ -288,6 +302,9 @@ echo ''?>
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
 
+         <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
+
          
       </div>
     
@@ -336,6 +353,9 @@ echo ''?>
         
         <input type="hidden" name="product_id"
          value=" <?php echo $product_id; ?>" >
+
+         <input type="hidden" name="product_price" value=" <?php echo $price; ?>">
+           <input type="hidden" name="product_name" value=" <?php echo $name; ?>">
          
       </div>
     

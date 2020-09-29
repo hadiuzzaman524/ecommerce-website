@@ -4,7 +4,8 @@
 
 
 /* show added to the cart dialog*/
-if(isset($_SESSION['added_cart_dialog'])){
+
+/*if(isset($_SESSION['added_cart_dialog'])){
 ?>
     
   <script>
@@ -14,6 +15,7 @@ swal("Added to the cart..!", "", "success");
 <?php 
 unset($_SESSION['added_cart_dialog']);
 }
+*/
 
 /*show already added in the cart dialog*/
 
@@ -56,6 +58,20 @@ swal("Item is remove successfully.!");
 </script>  
 <?php 
 unset($_SESSION['itemremove']);
+}
+
+
+//..................................
+// check cart is empty or not
+if(isset($_SESSION['emptycart'])){
+?> 
+<script>
+
+swal("The Cart is empty !");
+
+</script>  
+<?php 
+unset($_SESSION['emptycart']);
 }
 
 

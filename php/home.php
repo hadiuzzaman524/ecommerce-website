@@ -122,26 +122,26 @@ if(isset($_POST['addcard']))
     <div class="choose_us">
           <!-- first element -->
           <div class="choose_area">
-              <img src="../image/square.jpg" alt="No image">
+              <img src="../image/choose/car.png" alt="No image">
               <h3>Fastest home dalivery</h3>
           </div>
         <!-- end first element div-->
           <!-- first element -->
           <div class="choose_area">
-               <img src="../image/square.jpg" alt="No image">
+               <img src="../image/choose/med.png" alt="No image">
               <h3>Every kind of product available</h3>
           </div>
         <!-- end first element div-->
           <!-- first element -->
           <div class="choose_area">
-             <img src="../image/square.jpg" alt="No image">
-              <h3>Chip rate</h3>
+             <img src="../image/choose/padlock.png" alt="No image">
+              <h3>Sequre Payment</h3>
           </div>
         <!-- end first element div-->
           <!-- first element -->
           <div class="choose_area">
-               <img src="../image/square.jpg" alt="No image">
-              <h3>Square Pharmaceuticals Ltd.</h3>
+               <img src="../image/choose/badge.png" alt="No image">
+              <h3>Original Product's availability</h3>
           </div>
         <!-- end first element div-->
     </div>
