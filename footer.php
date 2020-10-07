@@ -15,10 +15,10 @@
           <h2>About us</h2>
           <div class="leftcontent">
              
-            <h4>H Address:</h4>
+            <h4>Address:</h4>
              <p>Rangpur Cantonment,Rangpur</p>
              
-             <h4>H Have any questions?</h4>
+             <h4>Have any questions?</h4>
              <p>hadiuzzaman908@gmail.com</p>
              
                 <h4>H Contact </h4>
@@ -33,19 +33,24 @@
              <h2>Menu</h2>
           <div class="leftcontent">
              
-            <h4>H HOME</h4>
+            <a href="home.php"><h4 style="color: white; ">HOME</h4></a>
              
-             <h4 class="jaman">H CATEGORIES</h4>
-             <p>MEDICINE</p>
-             <P>SURGICAL INSTUMENTS</P>
-             <P>HARBAL MEDICINE</P>
+             <h4 class="jaman">CATEGORIES</h4>
              
-                <h4>H PRODUCT </h4>
-                <h4>H OUR SERVICE </h4>
+             <a href="medicine.php"><p style="color: white">MEDICINE</p></a>
+    
+             <a href="surgical.php"><p style="color: white">SURGICAL INSTUMENTS</p></a>
+            
+             <a href="harbal.php"><p style="color: white">HARBAL MEDICINE</p></a>
+              
+                 <a href="product.php"><h4 style="color: white">PRODUCT</h4></a>
+               
+          
+                 <a href="contactus.php"><h4 style="color: white">CONTACT US</h4></a>
+               
+                 <a href="login.php"><h4 style="color: white">LOGIN</h4></a>
                 
-                <h4>H CONTACT US</h4>
-                <h4>H LOGIN</h4>
-                <h4>H SIGNUP </h4>
+                 <a href="signup.php"><h4 style="color: white">SIGNUP</h4></a>
               
           </div>
       </div>

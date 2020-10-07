@@ -39,6 +39,10 @@
     margin-left: 15px;
     
 }
+
+.leftcontent a h4{
+  color: white;
+}
 .leftcontent h4{
      margin-top: 10px;
 }

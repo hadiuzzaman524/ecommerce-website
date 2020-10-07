@@ -1,5 +1,59 @@
 <?php 
 session_start();
+
+
+if(isset($_POST['submitbutton']))
+{
+  
+    $fname=$_POST['firstname']; 
+    $lname=$_POST['lastname']; 
+    $email=$_POST['email']; 
+    $description=$_POST['description'];
+    
+    if(empty($fname)){
+       
+        $errorMsg['firstname']="firstname required";
+    }
+   else if(empty($lname)){
+        $errorMsg['lastname']="lastname required"; 
+    }
+   else if(empty($email)){
+        $errorMsg['email']="email required"; 
+    }
+    else if(empty($description)){
+        $errorMsg['problem']="Please describe your problem"; 
+    }
+    else { 
+        
+            $connection=mysqli_connect('localhost','root');
+
+            if($connection)
+            {
+                $db=mysqli_select_db($connection,'homepharmacy');
+
+                if($db){
+
+
+                        $q="insert into contact_us(firstname,lastname,email,description) values('$fname','$lname','$email','$description')";
+                        mysqli_query($connection,$q);
+                        header("location:contactus.php");
+                       
+
+
+                }
+                else {
+                    print("No database available");
+                }     
+            }
+            else {
+                print("Connection goes wrong");
+            }
+
+
+      }
+
+}
+
 ?>
 
 
@@ -34,25 +88,66 @@ include("../php/header.php");
 <!-- start form area -->
   <div class="formarea">
   
+<form action="" method="post">
+  
 
-	  <label for="username">FIRST NAME*</label>
+	  <label for="username" style="display: block;">FIRST NAME*</label>
       <input type="text" name="firstname">
+      <?php 
+         
+         if(isset($errorMsg['firstname'])){
+             $msg=$errorMsg['firstname'];
+             
+             echo " <p style='font-size:15px; margin-left:15px; color:red; margin-top:-15px;margin-bottom:10px;'> $msg </p>";
+             
+         }
+         ?>
 
-      <label for="username">LAST NAME*</label>
+      <label for="username" style="display: block;">LAST NAME*</label>
       <input type="text" name="lastname">
+            <?php 
+         
+         if(isset($errorMsg['lastname'])){
+             $msg=$errorMsg['lastname'];
+             
+             echo " <p style='font-size:12px; margin-left:15px; color:red; margin-top:-15px;margin-bottom:10px;'> $msg </p>";
+             
+         }
+         ?>
 
-        <label for="email">EMAIL ADDRESS*</label>
+        <label for="email" style="display: block;">EMAIL ADDRESS*</label>
       <input type="email" name="email">
+            <?php 
+         
+         if(isset($errorMsg['email'])){
+             $msg=$errorMsg['email'];
+             
+             echo " <p style='font-size:12px; margin-left:15px; color:red; margin-top:-15px;margin-bottom:10px;'> $msg </p>";
+             
+         }
+         ?>
       
-   <label for="describe">DESCRIBE YOUR PROBLEM*  
+   <label for="describe" style="display: block;">DESCRIBE YOUR PROBLEM*  
    </label>
 
    <textarea rows="6" cols="5" name="description" >
+          <?php 
+         
+         if(isset($errorMsg['problem'])){
+             $msg=$errorMsg['problem'];
+             
+             echo " <p style='font-size:12px; margin-left:15px; color:red; margin-top:-15px;margin-bottom:10px;'> $msg </p>";
+             
+         }
+         ?>
      
 
    </textarea> 
       
-          <input type="submit" value="Send Message">
+          <input type="submit" value="Send Message" name="submitbutton">
+
+  </form>
+
     </div>
 <!-- end form area -->
 

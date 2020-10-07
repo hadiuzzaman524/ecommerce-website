@@ -8,7 +8,14 @@
 
      }
      elseif (isset($_POST['checkoutbutton'])) {
+          $c=count($_SESSION['cart']); 
+        
+        if($c>0){
          header("location:checkout.php");
+        }
+        else{
+        header("location:product.php");
+        }
      }
 
 
@@ -81,11 +88,25 @@
 
                $total=0; 
                $del=50;
+               $hadi=0;
                     foreach ($_SESSION['cart'] as $key => $value){
 
                        print($value['name']."  --- (".$value['price']."*".$value['quantity'].")<br>");
                         $total+=$value['price']*$value['quantity']; 
                         
+                       
+                                     $item_array=array( 
+                                    
+                                        'product_id'=> $value['product_id'],
+                                        'name'=>$value['name'],
+                                        'quantity'=> $value['quantity'],
+                                        'price'=>$value['price']
+                                         
+                                    );
+                                    
+                                $_SESSION['customer_order'][$hadi++]=$item_array;
+
+
                      }
                ?>
             

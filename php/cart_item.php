@@ -4,13 +4,9 @@
 session_start();
 require_once("returnquantity.php"); 
 
-
-
-
-
 if(isset($_POST['remove']) || isset($_POST['plusbutton']) || isset($_POST['minusbutton'])){
 
-    foreach ($_SESSION['cart'] as $key => &$value) {
+    foreach ($_SESSION['cart'] as $key => $value) {
 
     if($value['product_id']==$_POST['getproduct_id']){
 
@@ -22,31 +18,31 @@ if(isset($_POST['remove']) || isset($_POST['plusbutton']) || isset($_POST['minus
      }
      elseif (isset($_POST['plusbutton'])) {
        
-        $value['quantity']+=1; 
+        //$value['quantity']+=1; 
+          $_SESSION['cart'][$key]['quantity']++;
+
         
      }
      elseif (isset($_POST['minusbutton'])) {
 
       
         if($value['quantity']>1){
-          $value['quantity']-=1;
+          $_SESSION['cart'][$key]['quantity']--;
+          
 
-        }
-         
-         
+        }       
      }
-
-
     }
 
-  
    }
 
 }
+
 unset($_SESSION['getproduct_id']);
 
-
 //...............................................................
+
+
 
 function getCart($img,$name,$description,$price,$product_id){
 

@@ -158,7 +158,22 @@ if(isset($_POST['searchbutton'])){
 
                <!-- Cart item-->
                <div id="bangla">
-               <p> <i class="fa fa-shopping-cart" aria-hidden="true"></i> <a href="../php/cart.php">Cart </a><span style="border: 1px solid white; padding: 4px; border-radius: 10px; background: white;color: orange; font-weight: 700;">
+               <p> <i class="fa fa-shopping-cart" aria-hidden="true"></i> <a href="<?php 
+
+                $c=count($_SESSION['cart']); 
+                if($c>0){
+
+                print("../php/cart.php"); 
+
+                }
+                else{
+                    
+                    print('#');
+                  //  $_SESSION['emptycart']='the cart is empty';
+                 
+                }
+
+               ?>">Cart </a><span style="border: 1px solid white; padding: 4px; border-radius: 10px; background: white;color: orange; font-weight: 700;">
                <?php 
                    
                 if(isset($_SESSION['cart'])){
