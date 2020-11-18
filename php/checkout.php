@@ -2,8 +2,6 @@
 
 session_start(); 
 
-
-
 if(isset($_POST['placeorder']))
 {
   
@@ -68,30 +66,70 @@ if(isset($_POST['placeorder']))
 
 
 //.............................................................................................
-                	//order details
+                    $all_id=""; 
+                    $all_quantity=""; 
+                
                 		 foreach ($_SESSION['customer_order'] as $key => $value){
 
 					       $id=$value['product_id'];
-					       $name=$value['name'];
-					       $price=$value['price']; 
+
+                           $all_id.=$id;
+                           $all_id.=", "; 
+
+					
 					       $quantity=$value['quantity'];
+                           $all_quantity.=$quantity; 
+                           $all_quantity.=" ,"; 
+
 
 
 					     }
+                
 
-//..................................................................................................
+                        
+
+                        // store customer order details 
+                    
+                         $firstQueary="insert into final_order(product_id,product_quantity) 
+                         values 
+                         ('$all_id','$all_quantity')"; 
+
+                          mysqli_query($connection,$firstQueary);
+                          $all_id=""; 
+                          $all_quantity=""; 
+
+
+//fetch final_order id for store order_ table 
+
+                            $lastid=0;
+                             $returnQ="SELECT id FROM final_order";
+        
+                                $return_result=mysqli_query($connection,$returnQ); 
+                                
+                                if(mysqli_num_rows($return_result)>0){
+                                    
+                                  $c=0;
+                                  while($row=mysqli_fetch_assoc($return_result)){
+                                    $c++;
+                                   
+                                    $lastid=$row['id']; 
+                                   
+                                
+                                  }
+                                }
+                        
                       
 					//store belling address 
 
-                       $q="insert into order_(firstname,lastname,company,country,housenumber,apartment,city,district,postcode,phone,email,notes,paymentoption) values
+                       $q="insert into order_(final_order_id,firstname,lastname,company,country,housenumber,apartment,city,district,postcode,phone,email,notes,paymentoption) values
 
-                       ('$firstname','$lastname','$company','$country','$housenumber','$apartment','$city','$district','$postcode','$phone','$email','$additional','$paymentoption')";
+                       ('$lastid','$firstname','$lastname','$company','$country','$housenumber','$apartment','$city','$district','$postcode','$phone','$email','$additional','$paymentoption')";
 
 
                          mysqli_query($connection,$q);
                        
                        
-                       
+                     unset($_SESSION['cart']);
 
                 }
                 else {
