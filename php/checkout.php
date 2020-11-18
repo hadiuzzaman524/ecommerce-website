@@ -127,9 +127,29 @@ if(isset($_POST['placeorder']))
 
 
                          mysqli_query($connection,$q);
+
+
+
+                         //fetch customer orderId
+                           $lid=0;
+                             $rQ="SELECT id FROM order_";
+        
+                                $rR=mysqli_query($connection,$rQ); 
+                                
+                                if(mysqli_num_rows($rR)>0){
+                                    
+                                  $c=0;
+                                  while($row=mysqli_fetch_assoc($rR)){
+                                    $c++;
+                                   
+                                    $lid=$row['id']; 
+                                
+                                  }
+                                }
                        
-                       
-                     unset($_SESSION['cart']);
+                      unset($_SESSION['cart']);
+                      setcookie('orderNumber',$lid,time()+60*60*500);
+                      header("location:confirm_order.php");
 
                 }
                 else {

@@ -12,6 +12,8 @@ if(isset($_POST['backtohome'])){
  unset($_SESSION['cart']);
  //print(count($_SESSION['cart']));
  setcookie("userinformation","",time()-60);
+ setcookie("orderNumber","",time()-60);
+
   header("location:home.php");
 }
 

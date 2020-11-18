@@ -119,7 +119,29 @@ if(isset($_POST['searchbutton'])){
                     <li><a href="../php/contactus.php"><i class="fa fa-phone" aria-hidden="true"></i> Contact Us</a></li>
                     
                     
-                      <li><a href="../php/signup.php"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+                      <?php 
+                    echo ""?>
+                       <li><a href= <?php 
+                        
+                        if(isset($_COOKIE['orderNumber'])){
+                        
+                           echo"../php/confirm_order.php";
+                          
+                        }
+                    else{
+                       echo"../php/signup.php"; 
+                    }
+                         ?> ><i class="fa fa-user-plus" aria-hidden="true"></i> <?php 
+                         
+                         if(isset($_COOKIE['orderNumber']))
+                         {
+                             echo "Order";
+                             
+                         }else{
+                             echo "Sign Up"; 
+                         }
+                        
+                    ?></a></li>
                   <?php 
                     echo ""?>
                        <li><a href= <?php 
